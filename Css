@@ -1,52 +1,39 @@
-*{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    
-}
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    color: #333;
-    width: 400px;
-    margin: 0 auto;
+    font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: hsla(90, 1%, 46%, 0.959);
+
+.container {
+    background: rgb(238, 242, 238);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
-.counter-preview {
-    font-size: 8rem;
-    font-weight: bold;
-    color: #333;
-}
-
-button {
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-left: 1rem;
+    font-size: 16px;
 }
 
-.decrement {
-    background-color: #4caf50;
+.results p {
+    margin: 5px 0;
 }
 
-.reset {
-    background-color: #f44336;
+.results span {
+    font-weight: bold;
 }
-
-.increment {
-    background-color: #2196f3;
 }
