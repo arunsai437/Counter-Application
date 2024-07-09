@@ -1,15 +1,16 @@
-document.getElementById('textInput').addEventListener('input', updateCounts);
+function countText() {
+    let text = document.getElementById("inputText").value;
 
-function updateCounts() {
-    const text = document.getElementById('textInput').value;
-    
-    const wordCount = text.match(/\b[-?(\w+)?]+\b/gi)?.length || 0;
-    const charCount = text.length;
-    const numberCount = (text.match(/\d/g) || []).length;
-    const specialCharCount = (text.match(/[^a-zA-Z0-9\s]/g) || []).length;
-    
-    document.getElementById('wordCount').textContent = wordCount;
-    document.getElementById('charCount').textContent = charCount;
-    document.getElementById('numberCount').textContent = numberCount;
-    document.getElementById('specialCharCount').textContent = specialCharCount;
+    let words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+    let numbers = (text.match(/\d/g) || []).length;
+    let specialCharacters = (text.match(/[!@#$%^&*(),.?":{}|<>]/g) || []).length;
+
+    document.getElementById("wordCount").innerText = words;
+    document.getElementById("numberCount").innerText = numbers;
+    document.getElementById("specialCount").innerText = specialCharacters;
+}
+
+function clearText() {
+    document.getElementById("inputText").value = '';
+    countText();
 }
